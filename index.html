@@ -620,20 +620,6 @@ if(!S.plans || S.plans.length === 0){
   save();
 }
 
-// Seed sample history
-if(!S.sessions || S.sessions.length === 0){
-  const t = new Date(); const d2 = new Date(t); d2.setDate(t.getDate()-3);
-  S.sessions = [
-    { id:'s1', date: d2.toISOString().slice(0,10), label:'Push', planName:'PPL',
-      exercises:[
-        { id:'e1', name:'Bench Press', equip:'barbell', sets:[{r:8,w:135},{r:8,w:145},{r:6,w:155}], notes:'New PR' },
-        { id:'e2', name:'Overhead Press', equip:'barbell', sets:[{r:10,w:95},{r:8,w:105},{r:8,w:105}], notes:'' },
-        { id:'e3', name:'Tricep Pushdown', equip:'cable', sets:[{r:12,w:40},{r:12,w:45},{r:10,w:45}], notes:'' },
-      ]
-    },
-  ];
-  save();
-}
 if(!S.today) S.today = [];
 if(!S.settings) S.settings = { tz:'America/New_York' };
 
